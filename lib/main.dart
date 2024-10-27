@@ -20,7 +20,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360, 690), // 디자인 기준 사이즈 설정
+      designSize: const Size(360, 844), // 디자인 기준 사이즈 설정
       builder: (context, child) {
         return MaterialApp.router(
           routerConfig: router,

@@ -95,6 +95,7 @@ dependencies:
   url_launcher: ^6.3.0
   google_sign_in: ^6.2.1
   back_button_interceptor: ^7.0.3
+  carousel_slider: ^5.0.0 # carousel_slider 추가
 
 dev_dependencies:
   flutter_test:
@@ -124,6 +125,11 @@ flutter:
     - assets/image/navfamily.svg
     - assets/image/navgoods.svg
     - assets/image/navhome.svg
+    - assets/image/sopicture.png
+    - assets/image/so2.png
+    - assets/image/so3.png
+    - assets/image/sopicture.svg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
