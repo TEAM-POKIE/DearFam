@@ -1,7 +1,9 @@
 import 'package:dearfam/core/constants/style.dart';
 import 'package:dearfam/src/providers/page_provider.dart';
-import 'package:dearfam/src/view/create_post_page.dart';
+
 import 'package:dearfam/src/view/lastWidget.dart';
+import 'package:dearfam/src/view/photo_view_page.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -78,54 +80,64 @@ class _HomeBodyState extends ConsumerState<HomeBody> {
   }
 
   Widget _buildPage(String imagePath, String title, String content) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Container(
-            padding: EdgeInsets.all(16.0.w),
-            width: 320.0.w,
-            height: 468.h,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20.0),
-              border: Border.all(color: Colors.grey),
-              color: ColorSystem.brandMainWhite,
-            ),
-            child: Column(
-              children: [
-                Image.asset(
-                  imagePath,
-                  width: 270.w,
-                  height: 280.h,
-                ),
-                SizedBox(
-                  height: 15.h,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      title,
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                      textAlign: TextAlign.left,
-                    ),
-                    SizedBox(
-                      height: 15.h,
-                    ),
-                    Container(
-                      width: 300.w,
-                      child: Text(
-                        content,
-                        style: TextStyle(color: Colors.grey[600]),
-                        textAlign: TextAlign.left,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => PhotoViewPage(
+              imagePath: imagePath,
+              title: title,
+              content: content,
             ),
           ),
-        ],
+        );
+      },
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.all(16.0.w),
+              width: 320.0.w,
+              height: 468.h,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20.0),
+                border: Border.all(color: Colors.grey),
+                color: ColorSystem.brandMainWhite,
+              ),
+              child: Column(
+                children: [
+                  Image.asset(
+                    imagePath,
+                    width: 270.w,
+                    height: 280.h,
+                  ),
+                  SizedBox(height: 15.h),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        title,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.left,
+                      ),
+                      SizedBox(height: 15.h),
+                      Container(
+                        width: 300.w,
+                        child: Text(
+                          content,
+                          style: TextStyle(color: Colors.grey[600]),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

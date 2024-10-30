@@ -1,3 +1,4 @@
+import 'package:dearfam/core/constants/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,7 +27,7 @@ class _MyAppState extends State<MyApp> {
           routerConfig: router,
           title: 'DearFam',
           theme: ThemeData(
-            scaffoldBackgroundColor: Colors.white,
+            scaffoldBackgroundColor: ColorSystem.brandMainlightColor,
             primaryColor: Colors.purple,
           ),
         );

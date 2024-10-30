@@ -30,3 +30,15 @@ class PostNotifier extends StateNotifier<List<Post>> {
 final postProvider = StateNotifierProvider<PostNotifier, List<Post>>((ref) {
   return PostNotifier();
 });
+
+class FavoriteNotifier extends StateNotifier<bool> {
+  FavoriteNotifier() : super(false);
+
+  void toggleFavorite() {
+    state = !state;
+  }
+}
+
+final favoriteProvider = StateNotifierProvider<FavoriteNotifier, bool>((ref) {
+  return FavoriteNotifier();
+});

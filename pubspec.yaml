@@ -129,6 +129,23 @@ flutter:
     - assets/image/so2.png
     - assets/image/so3.png
     - assets/image/sopicture.svg
+    - assets/image/goods1.png
+    - assets/image/goods2.png
+    - assets/image/goods3.png
+    - assets/image/goods4.png
+    - assets/image/goods5.png
+    - assets/image/group1.png
+    - assets/image/group2.png
+    - assets/image/group3.png
+    - assets/image/group4.png
+    - assets/image/group5.png
+    - assets/image/group6.png
+    - assets/image/group7.png
+    - assets/image/fa1.png
+    - assets/image/fa2.png
+    - assets/image/fa3.png
+    - assets/image/fa4.png
+    - assets/image/fa5.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
