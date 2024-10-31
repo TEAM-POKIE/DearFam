@@ -17,25 +17,32 @@ class FamilyPage extends StatelessWidget {
             ),
             Text('우리 가족의 구성도예요. 우측 상단의 링크 복사를 통해 아직 참여하지 않은 가족들을 더 초대해보세요!'),
             SizedBox(height: 20),
-            CustomPaint(
-              size: Size(double.infinity, 200),
-              painter: FamilyTreePainter(),
-              child: Column(
-                children: [
-                  Container(
-                    width: double.infinity,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        _buildFamilyMember('assets/image/fa5.png', '홍아빠'),
-                        SizedBox(width: 100),
-                        _buildFamilyMember('assets/image/fa4.png', '김엄마'),
-                      ],
+            Container(
+              padding: EdgeInsets.all(25),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+              child: CustomPaint(
+                size: Size(double.infinity, 200),
+                painter: FamilyTreePainter(),
+                child: Column(
+                  children: [
+                    Container(
+                      width: double.infinity,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          _buildFamilyMember('assets/image/fa5.png', '홍아빠'),
+                          SizedBox(width: 100),
+                          _buildFamilyMember('assets/image/fa4.png', '김엄마'),
+                        ],
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 20),
-                  _buildFamilyMember('assets/image/fa3.png', '홍딸'),
-                ],
+                    SizedBox(height: 20),
+                    _buildFamilyMember('assets/image/fa3.png', '홍딸'),
+                  ],
+                ),
               ),
             ),
             SizedBox(height: 40),
