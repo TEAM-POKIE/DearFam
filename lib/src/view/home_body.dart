@@ -1,9 +1,7 @@
 import 'package:dearfam/core/constants/style.dart';
+import 'package:dearfam/src/pages/photo_view_page.dart';
 import 'package:dearfam/src/providers/page_provider.dart';
-
 import 'package:dearfam/src/view/lastWidget.dart';
-import 'package:dearfam/src/view/photo_view/photo_view_page.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -85,10 +83,7 @@ class _HomeBodyState extends ConsumerState<HomeBody> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => PhotoViewPage(
-              title: title,
-              content: content,
-            ),
+            builder: (context) => PhotoViewPage(),
           ),
         );
       },
