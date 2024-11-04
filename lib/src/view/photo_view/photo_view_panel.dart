@@ -4,10 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:dearfam/core/constants/style.dart';
 
 class PhotoViewPanel extends StatelessWidget {
-  final String content;
-
-  PhotoViewPanel({required this.content});
-
   @override
   Widget build(BuildContext context) {
     return SlidingUpPanel(
@@ -44,7 +40,7 @@ class PhotoViewPanel extends StatelessWidget {
             ],
           ),
           SizedBox(height: 20),
-          Text(content),
+          Text('내용'),
           SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
