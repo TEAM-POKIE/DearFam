@@ -18,14 +18,12 @@ class _CreatePostPageState extends ConsumerState<CreatePostPage> {
   final TextEditingController _contentController = TextEditingController();
 
   Future<void> _pickImage() async {
-    // 권한 요청
     if (await Permission.photos.request().isGranted) {
       final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
       setState(() {
         _image = image;
       });
     } else {
-      // 권한이 거부된 경우 처리
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('갤러리 접근 권한이 필요합니다.')),
       );
