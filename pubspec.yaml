@@ -96,6 +96,7 @@ dependencies:
   google_sign_in: ^6.2.1
   back_button_interceptor: ^7.0.3
   carousel_slider: ^5.0.0 # carousel_slider 추가
+  flutter_layout_grid: ^2.0.7
 
 dev_dependencies:
   flutter_test:
@@ -146,6 +147,8 @@ flutter:
     - assets/image/fa3.png
     - assets/image/fa4.png
     - assets/image/fa5.png
+    - assets/image/mainPicture.png
+    - assets/image/mainPicture2.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

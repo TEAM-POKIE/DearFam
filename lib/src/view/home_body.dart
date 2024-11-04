@@ -2,7 +2,7 @@ import 'package:dearfam/core/constants/style.dart';
 import 'package:dearfam/src/providers/page_provider.dart';
 
 import 'package:dearfam/src/view/lastWidget.dart';
-import 'package:dearfam/src/view/photo_view_page.dart';
+import 'package:dearfam/src/view/photo_view/photo_view_page.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -40,7 +40,7 @@ class _HomeBodyState extends ConsumerState<HomeBody> {
           Expanded(
             child: PageView.builder(
               controller: _pageController,
-              physics: BouncingScrollPhysics(), // 스크롤 물리학 추가
+              physics: BouncingScrollPhysics(),
               onPageChanged: (index) {
                 setState(() {
                   _currentPage = index;
@@ -86,7 +86,6 @@ class _HomeBodyState extends ConsumerState<HomeBody> {
           context,
           MaterialPageRoute(
             builder: (context) => PhotoViewPage(
-              imagePath: imagePath,
               title: title,
               content: content,
             ),

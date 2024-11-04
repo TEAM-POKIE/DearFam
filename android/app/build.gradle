@@ -1,7 +1,15 @@
+buildscript {
+    ext.kotlin_version = '1.8.0'
+    repositories {
+
+        mavenCentral()
+    }
+}
+
+
 plugins {
     id "com.android.application"
     id "kotlin-android"
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id "dev.flutter.flutter-gradle-plugin"
 }
 
@@ -16,23 +24,29 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8
+        jvmTarget = "1.8"
     }
 
-  defaultConfig {
-    applicationId "com.example.dearfam"
-    minSdkVersion flutter.minSdkVersion
-    targetSdkVersion flutter.targetSdkVersion
-    versionCode flutter.versionCode
-    versionName flutter.versionName
-    manifestPlaceholders = [appAuthRedirectScheme: "com.example.dearfam"]
-}
+    defaultConfig {
+        applicationId "com.example.dearfam"
+        minSdkVersion flutter.minSdkVersion
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode flutter.versionCode
+        versionName flutter.versionName
+            manifestPlaceholders = [
+                appAuthRedirectScheme: "com.example.dearfam",
+                applicationName:  "com.example.dearfam"
+            ]
+
+    }
 
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.debug
+            minifyEnabled false // Proguard 활성화 설정, 필요시 true로 변경 가능
+            shrinkResources false // 사용하지 않는 리소스 축소 비활성화, 필요시 true로 변경 가능
         }
     }
 }
