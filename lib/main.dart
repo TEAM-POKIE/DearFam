@@ -6,12 +6,10 @@ import 'package:dearfam/core/routes/routes.dart'; // Unused import removed
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'dart:async'; // Timer를 사용하기 위해 추가
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
-  // 카메라 권한 요청
-  await Permission.camera.request();
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -29,7 +27,15 @@ class MyApp extends StatefulWidget {
 // ...
 
 class _MyAppState extends State<MyApp> {
-  DateTime? currentBackPressTime;
+  @override
+  void initState() {
+    super.initState();
+    requestPermissions();
+  }
+
+  Future<void> requestPermissions() async {
+    await [Permission.camera, Permission.photos].request();
+  }
 
   @override
   Widget build(BuildContext context) {

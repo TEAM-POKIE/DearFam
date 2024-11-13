@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -36,8 +37,21 @@ class LoginScreen extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(12.r)),
               ),
               child: ElevatedButton(
-                onPressed: () {
-                  context.go('/home');
+                onPressed: () async {
+                  var status =
+                      await [Permission.camera, Permission.photos].request();
+                  if (status[Permission.camera]?.isGranted == true &&
+                      status[Permission.photos]?.isGranted == true) {
+                    context.go('/home');
+                  } else if (status[Permission.camera]?.isPermanentlyDenied ==
+                          true ||
+                      status[Permission.photos]?.isPermanentlyDenied == true) {
+                    openAppSettings();
+                  } else {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('카메라 및 사진 접근 권한이 필요합니다.')),
+                    );
+                  }
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: ColorSystem.brandKakao,
