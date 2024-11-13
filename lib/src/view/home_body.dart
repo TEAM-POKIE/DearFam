@@ -1,6 +1,6 @@
 import 'package:dearfam/core/constants/style.dart';
 import 'package:dearfam/src/pages/photo_view_page.dart';
-import 'package:dearfam/src/providers/page_provider.dart';
+import 'package:dearfam/core/provider/page_provider.dart';
 import 'package:dearfam/src/view/lastWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -32,7 +32,7 @@ class _HomeBodyState extends ConsumerState<HomeBody> {
     ];
 
     return Container(
-      color: ColorSystem.brandMainlightColor,
+      color: ColorSystem.brandMainColor2,
       child: Column(
         children: [
           Expanded(
@@ -98,7 +98,7 @@ class _HomeBodyState extends ConsumerState<HomeBody> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20.0),
                 border: Border.all(color: Colors.grey),
-                color: ColorSystem.brandMainWhite,
+                color: ColorSystem.textWhite,
               ),
               child: Column(
                 children: [
@@ -120,7 +120,9 @@ class _HomeBodyState extends ConsumerState<HomeBody> {
                       Container(
                         width: 300.w,
                         child: Text(
-                          content,
+                          content.length > 100
+                              ? content.substring(0, 100) + '...'
+                              : content,
                           style: TextStyle(color: Colors.grey[600]),
                           textAlign: TextAlign.left,
                         ),

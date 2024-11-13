@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1039927889428",
+    "project_id": "dearfam-1e2fe",
+    "storage_bucket": "dearfam-1e2fe.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039927889428:android:8f446fcdf8ef5ecba2a101",
+        "android_client_info": {
+          "package_name": "com.example.dearfam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7oC0uS2vKt_EiqF6DkKqHctrrL4FGWio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

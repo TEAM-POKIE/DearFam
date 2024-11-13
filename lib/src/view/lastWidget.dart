@@ -3,7 +3,7 @@ import 'package:dearfam/src/view/create_post_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:dearfam/src/providers/page_provider.dart';
+import 'package:dearfam/core/provider/page_provider.dart';
 
 class Lastwidget extends ConsumerWidget {
   @override
@@ -22,7 +22,7 @@ class Lastwidget extends ConsumerWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
                     border: Border.all(color: Colors.grey),
-                    color: ColorSystem.brandMainWhite,
+                    color: ColorSystem.textWhite,
                   ),
                   child: Column(
                     children: [
@@ -35,7 +35,7 @@ class Lastwidget extends ConsumerWidget {
                             height: 280.h,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20.0),
-                              color: ColorSystem.brandMainGrey4,
+                              color: ColorSystem.brandGrey4,
                             ),
                           ),
                           SizedBox(height: 15.h),

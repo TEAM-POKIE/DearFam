@@ -12,7 +12,7 @@ class BookshelfBody extends StatelessWidget {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                  color: ColorSystem.brandMainGrey,
+                  color: ColorSystem.brandGrey1,
                   blurStyle: BlurStyle.inner,
                   blurRadius: 300.0,
                   offset: Offset(0, 0),
@@ -21,7 +21,7 @@ class BookshelfBody extends StatelessWidget {
           ),
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 7.0, vertical: 20),
-            color: ColorSystem.brandMainlightColor,
+            color: ColorSystem.brandMainColor2,
             child: _buildShelfRow([
               'assets/image/group1.png',
             ]),
@@ -35,7 +35,7 @@ class BookshelfBody extends StatelessWidget {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                  color: ColorSystem.brandMainGrey,
+                  color: ColorSystem.brandGrey1,
                   blurStyle: BlurStyle.inner,
                   blurRadius: 300.0,
                   offset: Offset(0, 0),
@@ -44,7 +44,7 @@ class BookshelfBody extends StatelessWidget {
           ),
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 7.0, vertical: 20),
-            color: ColorSystem.brandMainlightColor,
+            color: ColorSystem.brandMainColor2,
             child: _buildShelfRow([
               'assets/image/group2.png',
               'assets/image/group3.png',
@@ -59,7 +59,7 @@ class BookshelfBody extends StatelessWidget {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                  color: ColorSystem.brandMainGrey,
+                  color: ColorSystem.brandGrey1,
                   blurStyle: BlurStyle.inner,
                   blurRadius: 300.0,
                   offset: Offset(0, 0),
@@ -68,7 +68,7 @@ class BookshelfBody extends StatelessWidget {
           ),
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 7.0, vertical: 20),
-            color: ColorSystem.brandMainlightColor,
+            color: ColorSystem.brandMainColor2,
             child: _buildShelfRow([
               'assets/image/group4.png',
               'assets/image/group5.png',
@@ -83,7 +83,7 @@ class BookshelfBody extends StatelessWidget {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                  color: ColorSystem.brandMainGrey,
+                  color: ColorSystem.brandGrey1,
                   blurStyle: BlurStyle.inner,
                   blurRadius: 300.0,
                   offset: Offset(0, 0),
@@ -92,7 +92,7 @@ class BookshelfBody extends StatelessWidget {
           ),
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 7.0, vertical: 20),
-            color: ColorSystem.brandMainlightColor,
+            color: ColorSystem.brandMainColor2,
             child: _buildShelfRow([
               'assets/image/group6.png',
               'assets/image/group7.png',

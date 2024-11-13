@@ -22,7 +22,7 @@ class Home extends ConsumerWidget {
     ];
 
     return Scaffold(
-      backgroundColor: ColorSystem.brandMainlightColor,
+      backgroundColor: ColorSystem.brandMainColor2,
       body: pages[currentIndex],
       bottomNavigationBar: CustomNavBar(
         currentIndex: currentIndex,
