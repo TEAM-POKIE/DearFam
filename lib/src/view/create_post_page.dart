@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'dart:io';
-import 'package:dearfam/src/providers/page_provider.dart';
+import 'package:dearfam/core/provider/page_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class CreatePostPage extends ConsumerStatefulWidget {
@@ -13,7 +13,7 @@ class CreatePostPage extends ConsumerStatefulWidget {
 
 class _CreatePostPageState extends ConsumerState<CreatePostPage> {
   final ImagePicker _picker = ImagePicker();
-  XFile? _image;
+  String? _imagePath;
   final TextEditingController _titleController = TextEditingController();
   final TextEditingController _contentController = TextEditingController();
 
@@ -21,7 +21,7 @@ class _CreatePostPageState extends ConsumerState<CreatePostPage> {
     if (await Permission.photos.request().isGranted) {
       final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
       setState(() {
-        _image = image;
+        _imagePath = image?.path;
       });
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -59,9 +59,9 @@ class _CreatePostPageState extends ConsumerState<CreatePostPage> {
                         borderRadius: BorderRadius.circular(20.0),
                         color: Colors.grey[300],
                       ),
-                      child: _image == null
+                      child: _imagePath == null
                           ? Icon(Icons.add, size: 50)
-                          : Image.file(File(_image!.path), fit: BoxFit.cover),
+                          : Image.file(File(_imagePath!), fit: BoxFit.cover),
                     ),
                   ),
                   SizedBox(height: 15.h),
@@ -108,9 +108,15 @@ class _CreatePostPageState extends ConsumerState<CreatePostPage> {
                           onPressed: () {
                             final title = _titleController.text;
                             final content = _contentController.text;
-                            ref
-                                .read(postProvider.notifier)
-                                .addPost(title, content);
+                            if (_imagePath != null) {
+                              ref
+                                  .read(postProvider.notifier)
+                                  .postBoard(_imagePath!, title, content);
+                            } else {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text('이미지를 선택해주세요.')),
+                              );
+                            }
                             ref.read(pageProvider.notifier).togglePage();
                           },
                           style: ElevatedButton.styleFrom(

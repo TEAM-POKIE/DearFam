@@ -277,6 +277,21 @@ abstract class FontSystem {
     letterSpacing: -0.4,
   );
 
+  static TextStyle KR32B = TextStyle(
+    fontSize: 32.sp,
+    fontFamily: 'Pretendard',
+    color: Colors.black,
+    fontWeight: FontWeight.bold,
+    letterSpacing: -0.4,
+  );
+  static TextStyle KR28B = TextStyle(
+    fontSize: 28.sp,
+    fontFamily: 'Pretendard',
+    color: Colors.black,
+    fontWeight: FontWeight.bold,
+    letterSpacing: -0.4,
+  );
+
 // Roboto
   static TextStyle Login16M = TextStyle(
     fontSize: 16.sp,

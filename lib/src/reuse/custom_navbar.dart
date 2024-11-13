@@ -16,7 +16,7 @@ class CustomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: ColorSystem.brandMainlightColor,
+        color: ColorSystem.brandMainColor2,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(30.r),
           topRight: Radius.circular(30.r),
@@ -36,14 +36,14 @@ class CustomNavBar extends StatelessWidget {
           topRight: Radius.circular(30.r),
         ),
         child: BottomNavigationBar(
-          backgroundColor: ColorSystem.brandMainlightColor,
+          backgroundColor: ColorSystem.brandMainColor2,
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 'assets/image/navhome.svg',
                 color: currentIndex == 0
-                    ? ColorSystem.brandMainColor
-                    : ColorSystem.brandMainGrey,
+                    ? ColorSystem.brandMainColor1
+                    : ColorSystem.brandGrey1,
               ),
               label: '일상',
             ),
@@ -51,8 +51,8 @@ class CustomNavBar extends StatelessWidget {
               icon: SvgPicture.asset(
                 'assets/image/navbookShelf.svg',
                 color: currentIndex == 1
-                    ? ColorSystem.brandMainColor
-                    : ColorSystem.brandMainGrey,
+                    ? ColorSystem.brandMainColor1
+                    : ColorSystem.brandGrey1,
               ),
               label: '책장',
             ),
@@ -60,8 +60,8 @@ class CustomNavBar extends StatelessWidget {
               icon: SvgPicture.asset(
                 'assets/image/navgoods.svg',
                 color: currentIndex == 2
-                    ? ColorSystem.brandMainColor
-                    : ColorSystem.brandMainGrey,
+                    ? ColorSystem.brandMainColor1
+                    : ColorSystem.brandGrey1,
               ),
               label: '굿즈',
             ),
@@ -69,8 +69,8 @@ class CustomNavBar extends StatelessWidget {
               icon: SvgPicture.asset(
                 'assets/image/navfamily.svg',
                 color: currentIndex == 3
-                    ? ColorSystem.brandMainColor
-                    : ColorSystem.brandMainGrey,
+                    ? ColorSystem.brandMainColor1
+                    : ColorSystem.brandGrey1,
               ),
               label: '가족',
             ),
@@ -78,8 +78,8 @@ class CustomNavBar extends StatelessWidget {
           currentIndex: currentIndex,
           onTap: onTap,
           type: BottomNavigationBarType.fixed,
-          selectedItemColor: ColorSystem.brandMainColor,
-          unselectedItemColor: ColorSystem.brandMainGrey,
+          selectedItemColor: ColorSystem.brandMainColor1,
+          unselectedItemColor: ColorSystem.brandGrey1,
         ),
       ),
     );

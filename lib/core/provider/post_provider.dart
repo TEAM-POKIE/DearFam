@@ -17,4 +17,4 @@ class PostNotifier extends StateNotifier<List<Post>> {
 
 final postProvider = StateNotifierProvider<PostNotifier, List<Post>>((ref) {
   return PostNotifier();
-}); 
+});

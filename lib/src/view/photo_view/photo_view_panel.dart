@@ -60,7 +60,7 @@ class PhotoViewPanel extends StatelessWidget {
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: ColorSystem.brandMainGrey,
+                      color: ColorSystem.brandGrey1,
                     ),
                     width: 155.w,
                     height: 130.h,
