@@ -154,6 +154,16 @@ flutter:
     - assets/image/loginTop.svg
     - assets/image/loginBottom.svg
     - assets/image/KakaoLogo.svg
+    - assets/image/event_profile_icon.svg
+    - assets/image/heart.svg
+    - assets/image/heart_grey.svg
+    - assets/image/no_image.svg
+    - assets/image/dearPamEventLogo.svg
+    - assets/image/header1.svg
+    - assets/image/header2.svg
+    - assets/image/header3.svg
+    - assets/image/header4.svg
+    - assets/image/header5.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

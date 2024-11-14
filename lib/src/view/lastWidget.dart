@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:dearfam/core/provider/page_provider.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Lastwidget extends ConsumerWidget {
   @override
@@ -16,7 +17,8 @@ class Lastwidget extends ConsumerWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.all(16.0.w),
+                  padding: EdgeInsets.only(
+                      top: 40.h, left: 15.w, right: 15.w, bottom: 15.w),
                   width: 300.0.w,
                   height: 468.h,
                   decoration: BoxDecoration(
@@ -25,49 +27,45 @@ class Lastwidget extends ConsumerWidget {
                     color: ColorSystem.textWhite,
                   ),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      SizedBox(height: 15.h),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            width: 270.w,
-                            height: 280.h,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20.0),
-                              color: ColorSystem.brandGrey4,
-                            ),
-                          ),
-                          SizedBox(height: 15.h),
                           Text(
                             "추억을 더 공유해보세요 !",
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                            style: FontSystem.KR16B
+                                .copyWith(color: ColorSystem.textBlack),
                             textAlign: TextAlign.left,
                           ),
-                          SizedBox(height: 15.h),
+                          SizedBox(height: 10.h),
                           Text(
                             "가족에게 일상과 추억의 이야기를 공유해보세요!",
-                            style: TextStyle(color: Colors.grey[600]),
+                            style: FontSystem.KR14R.copyWith(
+                                color: ColorSystem.brandHeaderGreyColor),
                             textAlign: TextAlign.left,
                           ),
-                          SizedBox(height: 20.h),
-                          ElevatedButton(
-                            onPressed: () {
-                              ref.watch(pageProvider.notifier).togglePage();
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xFFF5751E),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                              fixedSize: Size(270.w, 40.h),
-                            ),
-                            child: Text(
-                              '추억 공유하러 가기',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ),
                         ],
+                      ),
+                      Center(
+                        child: SvgPicture.asset(
+                            'assets/image/dearPamEventLogo.svg'),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          ref.watch(pageProvider.notifier).togglePage();
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xFFF5751E),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(14.0),
+                          ),
+                          fixedSize: Size(270.w, 49.h),
+                        ),
+                        child: Text(
+                          '추억 공유하러 가기',
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ],
                   ),

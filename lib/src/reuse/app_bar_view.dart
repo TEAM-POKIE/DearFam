@@ -3,24 +3,33 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class AppBarView extends StatelessWidget implements PreferredSizeWidget {
+  final String firstImage;
+  final String? secondimage;
+
+  AppBarView({required this.firstImage, this.secondimage});
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: ColorSystem.brandMainColor2,
       scrolledUnderElevation: 0,
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SvgPicture.asset('assets/image/DearFamFontLogo.svg'),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              CustomIconButton(image: firstImage, onPressed: () {}),
+              if (secondimage != null)
+                CustomIconButton(image: secondimage!, onPressed: () {})
+              else
+                Container()
+            ],
+          )
+        ],
+      ),
       elevation: 0,
-      title: SvgPicture.asset('assets/image/DearFamFontLogo.svg'),
-      flexibleSpace: FlexibleSpaceBar(),
-      actions: <Widget>[
-        CustomIconButton(
-          icon: Icons.settings,
-          onPressed: () {},
-        ),
-        CustomIconButton(
-          icon: Icons.notifications,
-          onPressed: () {},
-        ),
-      ],
     );
   }
 
@@ -29,15 +38,15 @@ class AppBarView extends StatelessWidget implements PreferredSizeWidget {
 }
 
 class CustomIconButton extends StatelessWidget {
-  final IconData icon;
+  final String image;
   final VoidCallback onPressed;
 
-  CustomIconButton({required this.icon, required this.onPressed});
+  CustomIconButton({required this.image, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: Icon(icon, color: Colors.grey[800]),
+      icon: SvgPicture.asset(image),
       onPressed: onPressed,
     );
   }

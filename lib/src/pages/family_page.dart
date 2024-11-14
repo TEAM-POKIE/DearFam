@@ -6,7 +6,10 @@ class FamilyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarView(),
+      appBar: AppBarView(
+        firstImage: 'assets/image/header3.svg',
+        secondimage: 'assets/image/header5.svg',
+      ),
       body: FamilyPageBody(),
     );
   }

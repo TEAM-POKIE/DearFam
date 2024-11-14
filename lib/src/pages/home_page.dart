@@ -5,6 +5,11 @@ import 'package:dearfam/src/view/home_body.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBarView(), body: HomeBody());
+    return Scaffold(
+        appBar: AppBarView(
+          firstImage: 'assets/image/header1.svg',
+          secondimage: 'assets/image/header5.svg',
+        ),
+        body: HomeBody());
   }
 }

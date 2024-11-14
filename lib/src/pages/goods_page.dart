@@ -6,7 +6,9 @@ class GoodsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarView(),
+      appBar: AppBarView(
+        firstImage: 'assets/image/header5.svg',
+      ),
       body: GoodsBody(),
     );
   }
