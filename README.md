@@ -11,10 +11,10 @@
 
 사진 레이아웃을 자동 생성하여 추억을 아름답게 구성하고, 가족 이야기를 동화책 형식으로 제작하여 감성적인 공유를 촉진합니다. 더 나아가, 생성형 AI를 활용해 사진을 기반으로 한 맞춤형 삽화를 제작하여 프리미엄 동화책이나 디지털 액자와 같은 실물 굿즈로 제공함으로써, 가족 간의 유대감을 한층 더 깊게 만들어 드립니다.
 
-## 프로그램 설치 URL
+## 🌐 프로그램 설치 URL
 (공란)
 
-## App Description
+## 📲 App Description
 ![2_메인페이지](https://github.com/user-attachments/assets/31651abe-1c05-4de9-898a-e21a1da5216b)
 ![3_이벤트 작성 페이지](https://github.com/user-attachments/assets/0245a790-fa7d-4a3a-ad53-2805909325af)
 ![4_댓글페이지](https://github.com/user-attachments/assets/116a50db-212e-4238-947c-6f9e553c8e2f)
@@ -22,7 +22,7 @@
 ![6_책장](https://github.com/user-attachments/assets/47942b36-1293-4bc4-9f61-0b2d44e4129d)
 ![7_가계도](https://github.com/user-attachments/assets/1367df61-db18-4f03-b47f-cd15e7c9c646)
 
-## 📋 DearFam 기능 설명
+## ✅ DearFam 기능 설명
 <details>
   <summary><b>메인 페이지</b> - 일상 공유 및 관람</summary>
   <div>
@@ -106,10 +106,10 @@
   </div>
 </details>
 
-## 시연 영상 링크
+## 🔗 시연 영상 링크
 https://youtu.be/-g-C96in92w?si=u5xQwX1VdHZ7nvw2
 
-## 개발 환경 및 아키텍쳐
+## ⚒️ 개발 환경 및 아키텍쳐
 |구분  |상세 내용  |
 |:--:|:--:|
 |OS|Window, OSX, Linux(Ubuntu20.02)|
@@ -120,7 +120,7 @@ https://youtu.be/-g-C96in92w?si=u5xQwX1VdHZ7nvw2
 |형상관리|Git|
 |의사소통 관리|Github, Linear, Discord, Notion, Obsidian|
 
-## 구성 요소 및 기술 설명
+## 💻 구성 요소 및 기술 설명
 
 <details>
   <summary><b>1. 사용자 및 프론트엔드 (Flutter)</b></summary>
@@ -169,7 +169,7 @@ https://youtu.be/-g-C96in92w?si=u5xQwX1VdHZ7nvw2
     </ul> 
 </details>
 
-## 프로젝트 팀원 소개 및 기여도
+## 👏🏻 프로젝트 팀원 소개 및 기여도
 | 역할 | 이름 | 기여도 |
 | ------ | ------ | ------ |
 | 🏆 프론트엔드 개발 (팀장) 및 총괄 | 신지은 | Frontend 20%, Design 30% |
