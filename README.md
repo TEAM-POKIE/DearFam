@@ -170,8 +170,9 @@ https://youtu.be/-g-C96in92w?si=u5xQwX1VdHZ7nvw2
 </details>
 
 ## 👏🏻 프로젝트 팀원 소개 및 기여도
-| 역할 | 이름 | 기여도 |
-| ------ | ------ | ------ |
-| 🏆 프론트엔드 개발 (팀장) 및 총괄 | 신지은 | Frontend 20%, Design 30% |
-| 디자인 및 백엔드 개발 | 안은소 | Design 70%, Backend 100% |
-| 프론트엔드 개발 | 김준하 | Frontend 80% |
+| 🏆 프론트엔드 개발 (팀장) 및 총괄 | 디자인 및 백엔드 개발 | 프론트엔드 개발 |
+|:--:|:--:|:--:|
+| <img width="100" alt="신지은_정장취업사진" src="https://github.com/user-attachments/assets/d8a4ea06-cce6-4c4d-a805-0bdc51721bde">| <img width="100" alt="안은소_취업정장사진" src="https://github.com/user-attachments/assets/dd38a6f9-9fc3-4405-ac0f-2652fab0e675"> |  |
+| 신지은 | 안은소 | 김준하 |
+|Frontend 20%, Design 30% | Design 70%, Backend 100% | Frontend 80% |
+
