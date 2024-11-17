@@ -1,17 +1,19 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class Post {
+  final String id;
   final String title;
   final String content;
 
-  Post(this.title, this.content);
+  Post(this.id, this.title, this.content);
 }
 
 class PostNotifier extends StateNotifier<List<Post>> {
   PostNotifier() : super([]);
 
   void addPost(String title, String content) {
-    state = [...state, Post(title, content)];
+    String id = DateTime.now().millisecondsSinceEpoch.toString();
+    state = [...state, Post(id, title, content)];
   }
 }
 

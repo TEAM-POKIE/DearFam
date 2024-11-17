@@ -1,6 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
 
 class PageNotifier extends StateNotifier<bool> {
@@ -25,30 +24,22 @@ class Post {
 class PostNotifier extends StateNotifier<List<Post>> {
   PostNotifier() : super([]);
 
-  void postBoard(String image, String title, String content) async {
+  void postBoard(String image, String title, String content) {
     final url = Uri.https(
-      'dearfam-1e2fe-default-rtdb.firebaseio.com/board.json',
+      'https://dearfam-1e2fe-default-rtdb.firebaseio.com/',
+      'flutter-architecture-test.json',
     );
-    try {
-      final response = await http.post(
-        url,
-        headers: {'Content-Type': 'application/json'},
-        body: jsonEncode(
-          {
-            'image': image,
-            'title': title,
-            'content': content,
-          },
-        ),
-      );
-      if (response.statusCode == 200) {
-        print('데이터가 성공적으로 업로드되었습니다.');
-      } else {
-        print('업로드 실패: ${response.statusCode} ${response.body}');
-      }
-    } catch (error) {
-      print('오류 발생: $error');
-    }
+    http.post(
+      url,
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode(
+        {
+          'image': image,
+          'title': title,
+          'content': content,
+        },
+      ),
+    );
   }
 }
 

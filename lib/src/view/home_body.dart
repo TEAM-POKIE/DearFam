@@ -20,8 +20,8 @@ class _HomeBodyState extends ConsumerState<HomeBody> {
     final postList = ref.watch(postProvider);
 
     final List<Widget> pages = [
-      _buildPage('assets/image/sopicture.png', '아빠는 딸램ss을 ...',
-          '아빠는 이때 결심했단다 .. 우리딸을 절대 울리지 않기로.. 큰딸 아니? 너는 억울하거나 속상하면 항상 아랫입술이 삐죽 나오는 버릇이 있단다.. 저 날 저 사진도 그런 날이었지. 딸램은 기억이 안나겠지만 아빠는 ...'),
+      _buildPage('assets/image/mainPicture.png', '첫 가족사진',
+          '이 날은 가족 모두가 처음으로 함께 사진을 찍은 날이야. 너희들의 환한 웃음과 함께 정말 행복한 순간이었지. 앞으로도 소중한 추억을 많이 남기고 싶구나. 😊 우리 가족 사랑해!'),
       _buildPage('assets/image/so2.png', '아빠는 딸램을 ...', '내용2'),
       _buildPage('assets/image/so3.png', '아빠는 딸램을 ...', '내용3'),
       ...postList
@@ -80,10 +80,11 @@ class _HomeBodyState extends ConsumerState<HomeBody> {
   Widget _buildPage(String imagePath, String title, String content) {
     return GestureDetector(
       onTap: () {
+        String postId = 'some_post_id';
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => PhotoViewPage(),
+            builder: (context) => PhotoViewPage(postId: postId),
           ),
         );
       },
@@ -104,7 +105,7 @@ class _HomeBodyState extends ConsumerState<HomeBody> {
                 children: [
                   Image.asset(
                     imagePath,
-                    width: 270.w,
+                    width: 390.w,
                     height: 280.h,
                   ),
                   SizedBox(height: 15.h),

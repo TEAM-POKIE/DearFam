@@ -99,6 +99,7 @@ dependencies:
   flutter_layout_grid: ^2.0.7
 
   firebase_database: ^11.1.4
+  zoom_pinch_overlay: ^1.4.3
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -159,6 +160,7 @@ flutter:
     - assets/image/heart_grey.svg
     - assets/image/no_image.svg
     - assets/image/dearPamEventLogo.svg
+    - assets/image/send.svg
     - assets/image/header1.svg
     - assets/image/header2.svg
     - assets/image/header3.svg
