@@ -15,12 +15,12 @@
 (공란)
 
 ## App Description
-![2_메인페이지](https://github.com/user-attachments/assets/5a5f13ce-918c-4017-8cc2-8e77b8cf99a1)
-![3_이벤트 작성 페이지](https://github.com/user-attachments/assets/f3e9e20f-b856-4e85-b362-0992493ccac4)
-![4_댓글페이지](https://github.com/user-attachments/assets/7d573794-73fc-4e32-a619-207f41f79399)
-![5_굿즈](https://github.com/user-attachments/assets/fcc123dc-e7b2-415f-bf02-9111dca2bcd4)
-![6_책장](https://github.com/user-attachments/assets/ece49c54-72c7-48f1-9f34-b4820b11315c)
-![7_가계도](https://github.com/user-attachments/assets/7b3550d5-84cc-4fee-8d66-56da336bca14)
+![2_메인페이지](https://github.com/user-attachments/assets/31651abe-1c05-4de9-898a-e21a1da5216b)
+![3_이벤트 작성 페이지](https://github.com/user-attachments/assets/0245a790-fa7d-4a3a-ad53-2805909325af)
+![4_댓글페이지](https://github.com/user-attachments/assets/116a50db-212e-4238-947c-6f9e553c8e2f)
+![5_굿즈](https://github.com/user-attachments/assets/434c946a-7b4b-4346-86ba-bff4a26e7c37)
+![6_책장](https://github.com/user-attachments/assets/47942b36-1293-4bc4-9f61-0b2d44e4129d)
+![7_가계도](https://github.com/user-attachments/assets/1367df61-db18-4f03-b47f-cd15e7c9c646)
 
 ## 📋 DearFam 기능 설명
 <details>
