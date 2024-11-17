@@ -1,5 +1,6 @@
 # Dearfam : 가족의 이야기를 담아드립니다
-![1_시작페이지](https://github.com/user-attachments/assets/19dedbe4-7b6b-4c6d-a9c0-7e12a3075da9)
+![Uploading 1_시작페이지.png…]()
+
 
 #### “가족과의 추억을 다양한 방식으로 남겨보세요!”
 
