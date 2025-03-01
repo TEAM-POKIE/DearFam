@@ -62,7 +62,7 @@ https://apk.tito.lat/dearfam.apk
           </li>
           <li><b>사진의 캐릭터화</b>
             <ul>
-              <li>가족의 사진을 <b>캐릭터화해</b>, 이색적이고 개성 있는 사진을 간직할 수 있음.</li>
+              <li>Generative AI를 활용하여 가족의 사진을 <b>캐릭터화해</b>, 이색적이고 개성 있는 사진을 제공</li>
             </ul>
           </li>
         </ul>
